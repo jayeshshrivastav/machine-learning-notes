@@ -1,0 +1,43 @@
+# Work Flow of a Ml project
+
+step1 :- Data
+step2 :- Preprocessing
+step3 :- Data Analysis
+step4 :- Train Test Split
+step5 :- Ml model feed
+step6 :- Evaluation 
+
+# Supervervised learning
+# Clasification -> Predicting a class or discrete values
+    Evaluation metric for Classification is Accuracy Score.
+
+# Regression -> Predicting a quantity or continuous values
+    Evaluation metric for Classification is Mean Absolute Error. 
+
+# Accuracy Score
+In Classification, Accuracy Score is the ratio of number of correct predictions to the
+total number of input data points.
+
+Accuracy Score = [number of correct predictions/total number of data points] * 100%
+
+Example :
+Number of correct predictions = 128
+Total number of data points = 150
+Accuracy score = [128/150]*100%
+    = 85.3%
+
+# Code
+from sklearn.metrics import accuracy_score
+
+# Mean Squared Error
+Mean Squared Error measures the average of the squares of the errors, that is, the average squared difference
+between the estimated values and actual value.
+
+MSE = 1/n Summation(Actual - Predicted )**2
+
+# Code
+from sklearn.metrics import mean_squared_error
+
+
+
+# add--> R square, rmse, 

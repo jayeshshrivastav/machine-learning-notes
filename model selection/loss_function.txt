@@ -1,0 +1,73 @@
+# Loss Function
+Loss function measures how far an estimated value is from its true value.
+It is helpful to determine which model performs better and which parameters are better.
+
+A loss function in Machine Learning measures how wrong a model’s predictions are.
+It tells the model:
+“Your prediction is far from the actual answer — improve it.”
+
+The model tries to minimize the loss during training.
+
+🧠 Basic Idea
+Suppose:
+
+Actual value = 10
+Predicted value = 7
+
+Error = 10 − 7 = 3
+
+A loss function converts this error into a numerical value.
+
+📌 Why Loss Function Is Important
+
+The loss function helps:
+
+Measure model performance
+Guide learning
+Update weights using optimization algorithms like Gradient Descent
+
+Without a loss function, the model wouldn’t know whether it is improving or not.
+
+Low Loss value -> High accuracy
+
+📊 Common Loss Functions
+1️⃣ Mean Squared Error (MSE)
+
+Used in Regression
+
+MSE = 1/n ∑ (Actual - Predicted)^2
+Example
+
+Actual = 10
+Predicted = 7
+Loss:
+(10−7)^2 =9
+
+Why square?
+Removes negative sign
+Penalizes large errors more strongly
+
+2️⃣ Mean Absolute Error (MAE)
+
+Also used in regression
+
+MAE= 1/n ∑ | Actual - Predicted |
+
+Example:
+
+∣10−7∣=3
+
+Difference from MSE
+MAE treats all errors equally
+MSE heavily punishes large errors
+3️⃣ Binary Cross Entropy (Log Loss)
+
+Used in Binary Classification
+
+L= 1/n ∑ [Actual_value log(Predicted)+(1−Actual)log(1−Predicted)]
+
+Used when outputs are:
+
+0 or 1
+Yes/No
+Spam/Not Spam

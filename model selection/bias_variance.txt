@@ -1,0 +1,38 @@
+# Bias
+The difference between the average prediction of our model and the correct value which we are trying to predict.
+
+# Variance
+Variance is the amount that the estimate of the target functrion will change if different training data was used.
+
+# Underfitting 
+- High Bias
+- Low Variance
+
+# Overfitting
+- Low Bias
+- High Variance
+
+# The Tradeoff
+Simple models (e.g., linear regression) → high bias, low variance
+Complex models (e.g., deep neural networks) → low bias, high variance
+
+The goal is to find the sweet spot that minimizes total error.
+
+# How to Manage It
+
+# Common techniques:
+ 
+Cross-validation → choose model complexity wisely
+Regularization (L1/L2) → reduce variance 
+More data → reduces variance without increasing bias
+Feature selection → simplifies the model
+Ensemble methods (e.g., Random Forest) → balance both
+
+# Simple Analogy
+
+Think of studying for an exam:
+
+Memorizing only a few concepts → high bias (too simplistic)
+Memorizing every tiny detail → high variance (overfitting)
+Understanding concepts + patterns → balanced model
+ 

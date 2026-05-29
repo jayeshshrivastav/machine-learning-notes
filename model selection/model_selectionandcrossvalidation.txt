@@ -1,0 +1,120 @@
+# Selection of model totally depends on the type of data we have :-
+- Images and videos --> CNN
+- Text data or speech data --> RNN
+- Numerical data --> SVM, Logistic Regression, Decision trees etc
+
+# Based on the task we need to carry out:
+- Classification tasks --> SVM, Logistic Regression, Decision trees etc.
+- Regression tasks --> Linear Regression, Random forest, Polynomial regression etc.
+- Clustering tasks --> K-Means Clustering, Hierarchical Clustering.
+
+# Cross Validation
+    Cross Validation is a technique used in Machine Learning to check how well a model performs on unseen data.
+    Instead of training and testing the model only once, we split the dataset multiple times and test the model repeatedly.
+    This helps us know:
+    - whether the model is good,
+    - whether it is overfitting,
+    - and how reliable its performance is.
+
+# Why Do We Need Cross Validation?
+    Suppose you split data like this:
+    - 80% → Training
+    - 20% → Testing
+
+    Sometimes the test data may be:
+    - too easy
+    - too difficult
+    - or not representative
+
+    So the accuracy may be misleading.
+
+    Cross validation solves this problem by testing the model on multiple different splits.
+    
+# Most Common Type: K-Fold Cross Validation
+
+Suppose:
+- Dataset has 100 rows
+- K = 5
+Then data is divided into 5 equal parts (folds).
+
+Process:
+
+Round 1
+Train on folds 2,3,4,5
+Test on fold 1
+Round 2
+Train on folds 1,3,4,5
+Test on fold 2
+
+…and so on.
+
+Finally:
+all 5 accuracies are averaged.
+
+# Visualization
+
+For 5-Fold CV:
+
+Fold	Train/Test
+1	    Test
+2	    Train
+3   	Train
+4	    Train
+5	    Train
+
+Then next iteration changes the test fold.
+
+# Advantages
+1. Better Evaluation
+Gives more reliable accuracy.
+
+2. Uses Data Efficiently
+Every data point becomes:
+training data
+and testing data
+
+3. Detects Overfitting
+If train accuracy is high but CV(Cross Validation) accuracy is low → overfitting.
+
+Disadvantages
+1. Slower
+Model trains multiple times.
+If K=10:
+training happens 10 times.
+
+2. Computationally Expensive
+Heavy models take more time.
+
+Types of Cross Validation
+1. K-Fold Cross Validation
+Most common.
+
+2. Stratified K-Fold
+Used in classification problems.
+Maintains class balance in every fold.
+Example:
+90% cats
+10% dogs
+Each fold keeps similar ratio.
+
+3. Leave-One-Out Cross Validation (LOOCV)
+If dataset has N rows:
+train on N−1 rows
+test on 1 row
+Repeats N times.
+Very expensive.
+
+4. Time Series Cross Validation
+Used for stock market or sequential data.
+Normal random splitting is NOT used.
+
+# code 
+from sklearn.model_selection import cross_val_score
+from sklearn.linear_model import LogisticRegression
+
+model = LogisticRegression()
+
+scores = cross_val_score(model, X, y, cv=5)
+
+print(scores)
+print(scores.mean())

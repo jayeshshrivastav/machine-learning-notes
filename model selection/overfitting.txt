@@ -1,0 +1,39 @@
+# Overfitting
+Overfitting refers to a model that models the training data too well.
+Overfitting when a model learns the detail and noise in the training dataset to the extent that it
+negatively impacts the performance of the model.
+
+graphs optimal vs overfit
+
+# How to find if our model has overfitted
+In this scenerio the model gives high training data accuracy and very low test data accuracy.
+
+# Causes of Overfitting
+1. Less data.
+2. Increased complexity of the model.
+3. More number of layers in Neural Network.
+
+# Preventing Overfitting by:
+1. Using more data.
+2. Reduce the number of layers in the Neural Network.
+3. Early Stopping.
+4. Bias-Variance Tradeoff.
+5. Use Dropouts.(It randomly drops out some neuron and reduce the complexity of neural network.)
+
+# Bias (Underfitting)
+Happens when the model is too simple.
+Misses important patterns in the data.
+Performs poorly on both training and test data.
+
+Example: fitting a straight line to data that clearly curves
+
+➡️ High bias = underfitting
+
+# Variance (Overfitting)
+Happens when the model is too complex.
+Captures noise as if it were real patterns.
+Performs well on training data but poorly on new data.
+
+Example: a very wiggly curve that perfectly fits training points but fails on new ones
+
+➡️ High variance = overfitting
