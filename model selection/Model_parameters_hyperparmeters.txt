@@ -1,0 +1,32 @@
+# Model Parameters
+These are the parameters of the model that can be determined by training with
+training data. These can be considered as internal Parameters.
+-> Weights  --> slope
+-> Bias  --> c
+
+Y = w*X + b
+similar to Y = mX + c
+here weight and bias are the internal parameter as obatined by the 
+features and data.
+
+# Hyper Parameters
+Hyperparameters are parameters whose values control the learning process. 
+These are adjustable parametersused to obtain an optimal model. External Parameters.
+-> Learning rate.
+-> Number of Epochs.
+
+# Model Parameters
+Weights -> weight decides how much influence the input will have on the output.
+if the inlfuence of the column is positive weight will have positive impact.
+else the influence of the column is negative weigth will have negative impact.
+Y = wx + b
+
+bais --> it is the intercept line of the graph
+
+# Hyperparameters
+Learning Rate:
+The Learning rate is tuning parameter in an optimization algorithm that determines
+the step size at each iteration while moving toward a minimum of a loss function.
+
+Number of epochs:
+represents the number of times the model iterates over the entire dataset.

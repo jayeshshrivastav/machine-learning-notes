@@ -1,0 +1,70 @@
+# Model Optimization 
+Optimization refers to determining best parameters for a model, such that the loss 
+function of the model decreases, as a result of which the model can predict more accurately.
+
+# Gradient Desent
+Gradient Desent is an optimization algorithm used to minimize a model's loss(error) function 
+by repeatedly adjusting the model's parameters(weights and bias).
+
+Think of it as :
+You are on a mountain and can't see the bottom thus you start moving downstrem according to the slope.
+
+This  is the exact way gradient decent works.
+
+# Why do we need Gradient Descent:
+When training a model, we want to find the values of weights and biases that produce the smallest possible error.
+
+For example in linear regression :
+y = wx + b
+
+The model starts with a random value of Weight(W) and bias(b).
+
+Step 1 : Define a Loss function
+the loss function measures how bad the predictions are.
+Graph :- y = x^2
+Top of bowl = high error
+Bottom of bowl = minimum error
+Our goal is tp reach the bottom.
+
+Step 2 : Calculate the gradient
+A gradient tells us:
+"Which direction should I move to reduce the loss."
+mathematically: 
+df(Loss)/d(weight)
+
+positive slope --> move left
+negative slope --> move right
+zero slope --> minimum point
+
+Step 3 : Update the weights
+the update rule is:
+w(of new) = w(of old) - n*(gradient)
+
+n --> learning rate
+the minus sign means we move in the direction that decreases the loss.
+
+# types of gradient Descent
+
+1. Batch Gradient Descent 
+uses the entire dataset to calculate gradients.
+Pros --> Stable, accurate
+Cons --> Slow for large datasets
+
+2. Stocahastic Gradient Descent(SGD)
+uses one training example at a time.
+Pros --> Fast,Less memory
+cons --> Nosiy updates
+
+3. Mini-Batch Gradient Descent
+Common batch size --> 16,32,64,128,256
+
+# Gradient Descent in Neural Networks
+Training process:
+- Forward Propagation
+- Calculate Loss
+- Backpropagation
+- Compute Gradients
+- Gradient Descent updates weights
+- Repeat
+
+Without Gradient Descent, neural networks cannot learn.
